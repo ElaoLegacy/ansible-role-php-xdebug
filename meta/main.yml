@@ -2,6 +2,7 @@
 
 dependencies:
 
+  - { role: elao.base }
   - { role: elao.php,
       php_config: 100_xdebug.ini,
       php_config_cli: {
