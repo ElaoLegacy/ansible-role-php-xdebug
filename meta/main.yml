@@ -2,29 +2,8 @@
 
 dependencies:
 
-  - { role: elao.php,
-      php_config: 100_xdebug.ini,
-      php_config_cli: {
-        xdebug.default_enable:           1,
-        xdebug.remote_enable:            1,
-        xdebug.remote_connect_back:      1,
-        xdebug.max_nesting_level:        300,
-        xdebug.var_display_max_children: 128,
-        xdebug.var_display_max_data:     512,
-        xdebug.var_display_max_depth:    4,
-        xdebug.cli_color:                1
-    },
-      php_config_fpm: {
-        xdebug.default_enable:           1,
-        xdebug.remote_enable:            1,
-        xdebug.remote_connect_back:      1,
-        xdebug.max_nesting_level:        300,
-        xdebug.var_display_max_children: 128,
-        xdebug.var_display_max_data:     512,
-        xdebug.var_display_max_depth:    4,
-        xdebug.cli_color:                1
-      }
-    }
+  - { role: elao.base }
+  - { role: elao.php }
 
 galaxy_info:
 
