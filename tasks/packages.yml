@@ -1,0 +1,11 @@
+---
+
+- name: packages
+  apt: >
+    name={{ item }}
+    state=present
+  with_items:
+    - php5-xdebug
+  notify:
+    - php restart
+  sudo: yes

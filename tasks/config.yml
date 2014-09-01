@@ -1,0 +1,10 @@
+---
+
+- name: config
+  template: >
+    src=config.ini.j2
+    dest=/etc/php5/{{ item }}/conf.d/90_xdebug.ini
+  notify:
+    - php restart
+  with_items: ['cli', 'fpm']
+  sudo: yes
